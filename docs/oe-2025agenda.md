@@ -8,16 +8,6 @@ This agenda is a forward-looking guide — not a static record.
 
 ---
 
-## 📆 Today's Agenda — July 11, 2025
-
-### 🎯 Objectives
-- Define and structure the concept of `predicate` in grammar and formal logic
-- Investigate emotional and semantic challenges in understanding secrecy in encryption
-- Frame encryption as a possible expressive or aesthetic form
-- Launch this GitHub agenda as the center of project direction
-- Write a working `index.html` for [www.open-experiments.org](https://www.open-experiments.org)
-
----
 
 ## 🧭 Fields Involved
 - Linguistics (lexical semantics, pragmatics)
@@ -35,6 +25,16 @@ This agenda is a forward-looking guide — not a static record.
 - **Goal:** Learn about *The Open Group* standards (e.g., TOGAF)
 - **Action:** Evaluate whether and how Open Experiments should adapt its structure to align with The Open Group’s frameworks
 - **Note:** Organizational milestone established **July 2025**
+
+---
+## 📆 Today's Agenda — July 11, 2025
+
+### 🎯 Objectives
+- Define and structure the concept of `predicate` in grammar and formal logic
+- Investigate emotional and semantic challenges in understanding secrecy in encryption
+- Frame encryption as a possible expressive or aesthetic form
+- Launch this GitHub agenda as the center of project direction
+- Write a working `index.html` for [www.open-experiments.org](https://www.open-experiments.org)
 
 ---
 
