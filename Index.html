@@ -13,6 +13,7 @@
         .accent-glow { color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
         .code-font { font-family: 'Fira Code', monospace; }
         .glass-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
+        .warning-border { border-left: 4px solid #f43f5e; }
     </style>
 </head>
 <body class="selection:bg-sky-500/30">
@@ -22,16 +23,16 @@
             <div class="flex items-center gap-3 mb-4">
                 <span class="px-3 py-1 text-xs font-bold tracking-widest uppercase bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded">Research Prototype</span>
             </div>
-            <h1 class="text-6xl font-bold mb-6 tracking-tighter">Project <span class="accent-glow">NP</span></h1>
-            <p class="text-2xl text-slate-400 font-light max-w-2xl">
-                跳脫矩陣思維：利用 <span class="text-slate-100">2-adic 有理數重構</span> 與 <span class="text-slate-100">進位推論</span> 破解 LWE 雜訊碎片。
+            <h1 class="text-6xl font-bold mb-6 tracking-tighter text-center md:text-left">Project <span class="accent-glow">NP</span></h1>
+            <p class="text-2xl text-slate-400 font-light max-w-2xl text-center md:text-left">
+                跳脫矩陣思維：利用 <span class="text-slate-100 font-normal">2-adic 有理數重構</span> 與 <span class="text-slate-100 font-normal">進位推論</span> 破解 LWE 雜訊碎片。
             </p>
             
             <div class="mt-10 p-6 glass-card rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
                     <p class="text-sm text-slate-500 uppercase tracking-widest mb-1">Project Lead</p>
                     <p class="text-xl font-semibold">蕭滿琳 Marilyn Hsiao</p>
-                    <p class="text-slate-400 text-sm">National Taiwan Normal University (NTNU)</p>
+                    <p class="text-slate-400 text-sm">國立臺灣師範大學 (NTNU)</p>
                 </div>
                 <div class="text-left md:text-right">
                     <p class="text-sm text-slate-500 uppercase tracking-widest mb-1">Contact & ID</p>
@@ -57,29 +58,33 @@
                 <div class="math-box p-8 rounded-3xl shadow-inner relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl font-bold code-font">v2</div>
                     <p class="text-sm text-sky-400 code-font mb-4">// NP Inference Formula</p>
-                    <div class="text-2xl text-center">
+                    <div class="text-2xl text-center py-4">
                         $$NP_{s+1} = \frac{NP_s + P_s + N_s}{2^{\text{v}_2(P_s \oplus N_s)}}$$
                     </div>
                     <p class="mt-6 text-xs text-slate-500 text-center uppercase tracking-tighter">
-                        透過 $2^{v_2}$ 提升位元深度，在不使用矩陣的情況下精確定位雜訊。
+                        透過 $2^{v_2}$ 提升位元深度，精確定位雜訊。
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="mb-20 grid md:grid-cols-3 gap-6">
-            <div class="p-6 glass-card rounded-2xl">
-                <h3 class="text-sky-400 font-bold mb-3 italic">Division Over Lattice</h3>
-                <p class="text-sm text-slate-400">捨棄高維矩陣運算，改採有理數長除法的遞迴邏輯，處理 LWE 的尾數誤差。</p>
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-8 h-px bg-rose-500"></span> 邊界分析 (Boundary Analysis)
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-xl warning-border">
+                    <h3 class="font-bold text-rose-400 mb-2">Modular Cliff (模數懸崖)</h3>
+                    <p class="text-sm text-slate-400">當 Truth ($P$) 的增長觸及模數 $Q$ 時，位元邏輯會發生非線性翻轉。如何處理位元運算與同餘運算的不相容性是目前的關鍵挑戰。</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl warning-border">
+                    <h3 class="font-bold text-rose-400 mb-2">Error Propagation (誤差累積)</h3>
+                    <p class="text-sm text-slate-400">$p$-adic 提升對 LSB 極度敏感。若低位元的推論出現 1-bit 偏差，會導致高位元序列完全偏離正確的有理路徑。</p>
+                </div>
             </div>
-            <div class="p-6 glass-card rounded-2xl">
-                <h3 class="text-sky-400 font-bold mb-3 italic">Symmetry Breaking</h3>
-                <p class="text-sm text-slate-400">強制 Truth ($P$) 與 False ($N$) 異值，利用 XOR 距離誘導系統從真空產生推論。</p>
-            </div>
-            <div class="p-6 glass-card rounded-2xl">
-                <h3 class="text-sky-400 font-bold mb-3 italic">Hensel Lifting</h3>
-                <p class="text-sm text-slate-400">從 LSB (最低有效位) 逐個位元「提升」出解，無視 LWE 的模糊初始狀態。</p>
-            </div>
+            <p class="mt-6 text-center text-slate-500 text-sm italic">
+                * 本專案目前針對純量 (Scalar) LWE 進行驗證，高維矩陣擴展仍在實驗中。
+            </p>
         </section>
 
         <footer class="mt-32 pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-8 pb-12">
