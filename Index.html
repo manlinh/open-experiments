@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project NP | Marilyn Hsiao | NTNU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .accent-text { color: #38bdf8; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-12 border-b border-slate-700 pb-8">
+            <h1 class="text-5xl font-bold mb-4 tracking-tight">Project <span class="accent-text">NP</span></h1>
+            <p class="text-xl text-slate-400">Rational Reconstruction & $p$-adic Lifting for LWE Cryptanalysis</p>
+            
+            <div class="mt-6 space-y-2">
+                <p class="text-lg font-medium">Project Lead: <span class="accent-text">蕭滿琳 Marilyn Hsiao</span></p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-600">NTNU Computer Science</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-600">ID: 40947044S</span>
+                    <a href="mailto:40947044S@ntnu.edu.tw" class="text-sky-400 hover:underline">40947044S@ntnu.edu.tw</a>
+                </div>
+                <p class="text-sm text-slate-500">Repository: <a href="https://github.com/manlinh/open-experiments" class="hover:text-sky-300">github.com/manlinh/open-experiments</a></p>
+            </div>
+        </header>
+
+        <section class="glass p-8 rounded-2xl mb-8">
+            <h2 class="text-2xl font-semibold mb-4 border-l-4 border-sky-500 pl-4">Abstract</h2>
+            <p class="leading-relaxed text-slate-300">
+                Project NP introduces a deterministic framework for resolving <strong>Learning With Errors (LWE)</strong> secrets by treating noise as periodic 2-adic rational fractions. Developed by Marilyn Hsiao at NTNU, this engine utilizes a recursive parity-lifting formula to "bridge" the gap between Truth ($P$) and Falsehood ($N$).
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">The Mathematical Core</h2>
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-700 mb-6 shadow-2xl">
+                <div class="text-2xl text-center py-4">
+                    $$NP_{s+1} = \frac{NP_s + P_s + N_s}{2^{\text{v}_2(P_s \oplus N_s)}}$$
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-20 pt-8 border-t border-slate-800 text-slate-500 text-sm pb-12">
+            <p class="mb-2">In partnership with the <strong>Open Experiments Community</strong>.</p>
+            <p>Special recognition to <strong>Google LLC</strong> for generative tools in the formalization of this research.</p>
+            <p class="mt-4 italic">"Noise is not a mask; it is a carry that hasn't been shifted yet." — M. Hsiao</p>
+        </footer>
+    </div>
+
+</body>
+</html>
